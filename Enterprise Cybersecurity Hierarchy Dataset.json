@@ -1,0 +1,99 @@
+{
+  "name": "Apex Global Enterprise",
+  "children": [
+    {
+      "name": "Threat Actors",
+      "children": [
+        {
+          "name": "Nation State",
+          "children": [
+            {"name": "APT ShadowFox"},
+            {"name": "APT CrimsonWolf"},
+            {"name": "APT SilentDragon"}
+          ]
+        },
+        {
+          "name": "Cyber Criminals",
+          "children": [
+            {"name": "DarkCipher"},
+            {"name": "BlackPhoenix"},
+            {"name": "ZeroStorm"}
+          ]
+        },
+        {
+          "name": "Insiders",
+          "children": [
+            {"name": "Privileged Employee"},
+            {"name": "Contractor"},
+            {"name": "Third Party Vendor"}
+          ]
+        },
+        {
+          "name": "Hacktivists",
+          "children": [
+            {"name": "Digital Freedom"},
+            {"name": "Open Resistance"}
+          ]
+        }
+      ]
+    },
+
+    {
+      "name": "Attack Vectors",
+      "children": [
+        {"name": "Phishing"},
+        {"name": "Business Email Compromise"},
+        {"name": "Credential Theft"},
+        {"name": "Malware"},
+        {"name": "Ransomware"},
+        {"name": "API Exploitation"},
+        {"name": "Supply Chain Attack"},
+        {"name": "Zero Day Exploit"},
+        {"name": "Insider Abuse"},
+        {"name": "Cloud Misconfiguration"}
+      ]
+    },
+
+    {
+      "name": "Target Systems",
+      "children": [
+        {"name": "Active Directory"},
+        {"name": "CRM"},
+        {"name": "ERP"},
+        {"name": "Customer Portal"},
+        {"name": "Data Lake"},
+        {"name": "Cloud Infrastructure"},
+        {"name": "Kubernetes Cluster"},
+        {"name": "AI Platform"},
+        {"name": "Financial Systems"},
+        {"name": "HR Systems"}
+      ]
+    },
+
+    {
+      "name": "Security Controls",
+      "children": [
+        {"name": "IAM"},
+        {"name": "MFA"},
+        {"name": "EDR"},
+        {"name": "SIEM"},
+        {"name": "SOAR"},
+        {"name": "WAF"},
+        {"name": "Zero Trust"},
+        {"name": "DLP"},
+        {"name": "CASB"}
+      ]
+    },
+
+    {
+      "name": "Incident Response",
+      "children": [
+        {"name": "Detection"},
+        {"name": "Containment"},
+        {"name": "Eradication"},
+        {"name": "Recovery"},
+        {"name": "Lessons Learned"}
+      ]
+    }
+  ]
+}

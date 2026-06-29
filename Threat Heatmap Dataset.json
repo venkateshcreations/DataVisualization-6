@@ -1,0 +1,37 @@
+[
+  {
+    "department":"Finance",
+    "phishing":92,
+    "malware":76,
+    "credentialTheft":88,
+    "insiderRisk":45
+  },
+  {
+    "department":"HR",
+    "phishing":85,
+    "malware":60,
+    "credentialTheft":74,
+    "insiderRisk":58
+  },
+  {
+    "department":"Sales",
+    "phishing":90,
+    "malware":55,
+    "credentialTheft":81,
+    "insiderRisk":30
+  },
+  {
+    "department":"Engineering",
+    "phishing":62,
+    "malware":78,
+    "credentialTheft":67,
+    "insiderRisk":40
+  },
+  {
+    "department":"Operations",
+    "phishing":70,
+    "malware":84,
+    "credentialTheft":60,
+    "insiderRisk":42
+  }
+]

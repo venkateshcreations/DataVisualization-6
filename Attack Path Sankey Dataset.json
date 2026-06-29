@@ -1,0 +1,100 @@
+[
+  {
+    "source":"Nation State",
+    "target":"Phishing",
+    "value":420
+  },
+  {
+    "source":"Nation State",
+    "target":"Zero Day Exploit",
+    "value":350
+  },
+  {
+    "source":"Cyber Criminals",
+    "target":"Ransomware",
+    "value":510
+  },
+  {
+    "source":"Cyber Criminals",
+    "target":"Credential Theft",
+    "value":430
+  },
+  {
+    "source":"Insiders",
+    "target":"Insider Abuse",
+    "value":220
+  },
+  {
+    "source":"Hacktivists",
+    "target":"API Exploitation",
+    "value":180
+  },
+
+  {
+    "source":"Phishing",
+    "target":"Active Directory",
+    "value":300
+  },
+  {
+    "source":"Credential Theft",
+    "target":"CRM",
+    "value":220
+  },
+  {
+    "source":"Ransomware",
+    "target":"ERP",
+    "value":350
+  },
+  {
+    "source":"Zero Day Exploit",
+    "target":"Cloud Infrastructure",
+    "value":280
+  },
+  {
+    "source":"API Exploitation",
+    "target":"Customer Portal",
+    "value":190
+  },
+
+  {
+    "source":"Active Directory",
+    "target":"MFA",
+    "value":180
+  },
+  {
+    "source":"CRM",
+    "target":"IAM",
+    "value":170
+  },
+  {
+    "source":"ERP",
+    "target":"EDR",
+    "value":240
+  },
+  {
+    "source":"Cloud Infrastructure",
+    "target":"Zero Trust",
+    "value":260
+  },
+
+  {
+    "source":"MFA",
+    "target":"Detection",
+    "value":160
+  },
+  {
+    "source":"IAM",
+    "target":"Containment",
+    "value":140
+  },
+  {
+    "source":"EDR",
+    "target":"Eradication",
+    "value":220
+  },
+  {
+    "source":"Zero Trust",
+    "target":"Recovery",
+    "value":200
+  }
+]

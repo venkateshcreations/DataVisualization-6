@@ -1,0 +1,32 @@
+[
+  {
+    "incidentId":"INC-2026-001",
+    "actor":"Nation State",
+    "vector":"Zero Day Exploit",
+    "target":"Cloud Infrastructure",
+    "severity":"Critical",
+    "financialImpact":4200000,
+    "recordsAffected":850000,
+    "responseHours":96
+  },
+  {
+    "incidentId":"INC-2026-002",
+    "actor":"Cyber Criminals",
+    "vector":"Ransomware",
+    "target":"ERP",
+    "severity":"High",
+    "financialImpact":1800000,
+    "recordsAffected":120000,
+    "responseHours":48
+  },
+  {
+    "incidentId":"INC-2026-003",
+    "actor":"Insider",
+    "vector":"Insider Abuse",
+    "target":"Financial Systems",
+    "severity":"Medium",
+    "financialImpact":650000,
+    "recordsAffected":25000,
+    "responseHours":12
+  }
+]

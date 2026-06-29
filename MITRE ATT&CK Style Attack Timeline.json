@@ -1,0 +1,32 @@
+[
+  {
+    "phase":"Initial Access",
+    "technique":"Phishing",
+    "successRate":78
+  },
+  {
+    "phase":"Execution",
+    "technique":"Malware Deployment",
+    "successRate":65
+  },
+  {
+    "phase":"Persistence",
+    "technique":"Credential Dumping",
+    "successRate":58
+  },
+  {
+    "phase":"Privilege Escalation",
+    "technique":"Token Manipulation",
+    "successRate":44
+  },
+  {
+    "phase":"Lateral Movement",
+    "technique":"Remote Services",
+    "successRate":39
+  },
+  {
+    "phase":"Data Exfiltration",
+    "technique":"Cloud Sync Abuse",
+    "successRate":32
+  }
+]

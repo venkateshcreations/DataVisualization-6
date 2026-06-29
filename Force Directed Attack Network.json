@@ -1,0 +1,36 @@
+{
+  "nodes":[
+    {"id":"Nation State","group":"Actor"},
+    {"id":"Cyber Criminals","group":"Actor"},
+    {"id":"Insiders","group":"Actor"},
+
+    {"id":"Phishing","group":"Vector"},
+    {"id":"Ransomware","group":"Vector"},
+    {"id":"Credential Theft","group":"Vector"},
+
+    {"id":"Active Directory","group":"System"},
+    {"id":"ERP","group":"System"},
+    {"id":"CRM","group":"System"},
+    {"id":"Cloud Infrastructure","group":"System"},
+
+    {"id":"EDR","group":"Control"},
+    {"id":"SIEM","group":"Control"},
+    {"id":"MFA","group":"Control"},
+    {"id":"Zero Trust","group":"Control"}
+  ],
+
+  "links":[
+    {"source":"Nation State","target":"Phishing"},
+    {"source":"Cyber Criminals","target":"Ransomware"},
+    {"source":"Insiders","target":"Credential Theft"},
+
+    {"source":"Phishing","target":"Active Directory"},
+    {"source":"Credential Theft","target":"CRM"},
+    {"source":"Ransomware","target":"ERP"},
+
+    {"source":"Active Directory","target":"MFA"},
+    {"source":"ERP","target":"EDR"},
+    {"source":"CRM","target":"SIEM"},
+    {"source":"Cloud Infrastructure","target":"Zero Trust"}
+  ]
+}

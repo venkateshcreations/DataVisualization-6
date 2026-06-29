@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Venkatesh Ammireddy is a UX Creative Director and AI-first Product UX Architect with 13+ years of experience designing enterprise platforms, AI systems, agentic UX workflows, and intelligent digital products." />
+<meta name="keywords" content="Venkatesh Ammireddy, UX Designer, UX Creative Director, AI UX Designer, Product UX Architect, Agentic AI UX, Enterprise UX, UI UX Portfolio, Frontend Designer, AI Product Design, UX India, UX Consultant, Human-AI Interaction, Agentic UI, UX Architecture, Enterprise Platform Design, Design Systems Leader, Cognitive UX, Conversational AI UX, SaaS UX Design, UX Strategy Consultant, Product Design Director, Figma Design System, Venkatesh Creations Portfolio, Senior UX Designer India, AI UI Design, UX Architect Venkatesh, Ammireddy UX Lead Architect, Venkatesh Ammireddy UX Creative Director, Creative UX Ammireddy, Ammireddy Venkatesh UX, Venkatesh Ammireddy Designer, Venkatesh Ammireddy UX Contractor, Independent UX Director, Independent Design Director, UX Venkatesh, UX Ammireddy, UX Director, AI-UX Ammireddy, UX Consultant Hyderabad, AI UX Architect India, Venkatesh Creations UX" />
+<meta name="author" content="Venkatesh Ammireddy" />
+<meta name="robots" content="index, follow" />
+<meta name="language" content="English" />
+<meta name="revisit-after" content="7 days" />
+<meta name="linkedin:owner" content="venkateshammireddy" />
+<link rel="me" href="https://www.linkedin.com/in/venkateshammireddy/" />
+<link rel="canonical" href="https://venkateshcreations.github.io/portfolio/" />
+<title>Apex Global Enterprises — SOC Command Center</title>
+<link rel="stylesheet" href="style.css">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<!-- Apache ECharts -->
+<script src="https://cdn.jsdelivr.net/npm/echarts@5.5.0/dist/echarts.min.js"></script>
+</head>
+<body>
+
+<div class="bg-grid"></div>
+
+<div class="app">
+
+  <!-- HEADER -->
+  <header class="header">
+    <div class="header-left">
+      <div class="header-logo">AG</div>
+      <div class="header-title">
+        <h1>APEX GLOBAL ENTERPRISES</h1>
+        <span>Security Operations Command Center</span>
+      </div>
+    </div>
+    <div class="header-right">
+      <div class="header-status">
+        <span class="lbl c-crit"><span class="dot"></span>2 Critical</span>
+        <span class="lbl c-high"><span class="dot"></span>4 High</span>
+        <span class="lbl c-med"><span class="dot"></span>12 Medium</span>
+        <span class="lbl c-low"><span class="dot"></span>86 Low</span>
+      </div>
+      <div class="search-box">
+        <span class="ic">⌕</span>
+        <input type="text" id="globalSearch" placeholder="Search incidents..." autocomplete="off">
+        <span class="search-count" id="searchCount"></span>
+        <button class="search-clear" id="searchClear">✕</button>
+      </div>
+      <div style="display:flex;gap:6px;align-items:center;" id="accentPicker">
+        <span class="accent-dot active" data-accent="#00f0ff" style="background:#00f0ff;box-shadow:0 0 8px #00f0ff;"></span>
+        <span class="accent-dot" data-accent="#8b5cf6" style="background:#8b5cf6;"></span>
+        <span class="accent-dot" data-accent="#f59e0b" style="background:#f59e0b;"></span>
+        <span class="accent-dot" data-accent="#10b981" style="background:#10b981;"></span>
+      </div>
+      <div class="header-time" id="headerTime">--:--:-- UTC</div>
+    </div>
+  </header>
+
+  <!-- ROW 0: HERO (Map & Terminal) -->
+  <div class="grid hero-grid">
+    <div class="card map-card">
+      <div class="card-header">
+        <h3>Global Threat Telemetry</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="mapCard" title="Fullscreen">⛶</button>
+        </div>
+      </div>
+      <div class="chart-box" style="height: 450px;" id="mapChart"></div>
+    </div>
+    
+    <div class="card terminal-card">
+      <div class="card-header">
+        <h3>Live Threat Feed</h3>
+        <span class="live-indicator"><span class="live-dot active"></span> LIVE</span>
+      </div>
+      <div class="terminal-box" id="terminalBox">
+        <div class="term-line sys">Init SOC core modules... [OK]</div>
+        <div class="term-line sys">Establishing secure connection... [OK]</div>
+        <div class="term-line sys">Awaiting incoming telemetry...</div>
+      </div>
+    </div>
+  </div>
+
+  <!-- METRICS -->
+  <div class="metrics">
+    <div class="metric-card mc-red" data-tilt><div class="bar"></div><div class="val" id="mTotalAlerts">0</div><div class="lbl">Total Alerts</div></div>
+    <div class="metric-card mc-amb" data-tilt><div class="bar"></div><div class="val" id="mAvgImpact">$0</div><div class="lbl">Avg Impact per Incident</div></div>
+    <div class="metric-card mc-cyn" data-tilt><div class="bar"></div><div class="val" id="mTotalRecords">0</div><div class="lbl">Records Exposed</div></div>
+    <div class="metric-card mc-pur" data-tilt><div class="bar"></div><div class="val" id="mChainSurvival">0%</div><div class="lbl">Chain Survival Rate</div></div>
+    <div class="metric-card mc-amb" data-tilt style="--amber:var(--red);"><div class="bar" style="background:var(--red);box-shadow:0 0 10px var(--red)"></div><div class="val" style="color:var(--red)" id="mAvgResponse">0h</div><div class="lbl">Avg Response Time</div></div>
+    <div class="metric-card mc-grn" data-tilt><div class="bar"></div><div class="val" id="mRiskReduction">0%</div><div class="lbl">Risk Reduction</div></div>
+  </div>
+
+  <!-- ROW 0.5: GAUGE & NETWORK -->
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header">
+        <h3>Enterprise Threat Posture</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="gaugeCard" title="Fullscreen">⛶</button>
+        </div>
+      </div>
+      <div class="chart-box" style="height: 280px;" id="gaugeChart"></div>
+    </div>
+
+    <div class="card">
+      <div class="card-header">
+        <h3>Real-time Network Bandwidth</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="netCard" title="Fullscreen">⛶</button>
+        </div>
+      </div>
+      <div class="chart-box" style="height: 280px;" id="networkChart"></div>
+    </div>
+  </div>
+
+  <!-- ROW 1 -->
+  <div class="grid grid-3">
+    <div class="card">
+      <div class="card-header">
+        <h3>SOC Alert Volume</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="socCard" title="Fullscreen">⛶</button>
+          <span class="ctrl-btn active" data-soc-mode="stacked" id="socStacked">▤ Stacked</span>
+          <span class="ctrl-btn" data-soc-mode="line" id="socLine">⬡ Line</span>
+        </div>
+      </div>
+      <div class="chart-box" id="socChart"></div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <h3>Threat Heatmap by Dept</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="heatmapCard" title="Fullscreen">⛶</button>
+        </div>
+      </div>
+      <div class="chart-box" id="heatmapChart"></div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <h3>MITRE ATT&CK Chain</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="mitreCard" title="Fullscreen">⛶</button>
+          <span class="ctrl-btn active" data-mitre-mode="bar" id="mitreBar">▦ Bar</span>
+          <span class="ctrl-btn" data-mitre-mode="radar" id="mitreRadar">⬡ Radar</span>
+        </div>
+      </div>
+      <div class="chart-box" id="mitreChart"></div>
+    </div>
+  </div>
+
+  <!-- ROW 2: Incidents -->
+  <div class="card">
+    <div class="card-header">
+      <h3>Cyber Incident Summary</h3>
+      <div class="card-ctrl">
+        <button class="ctrl-btn fullscreen-btn" data-fullscreen="incidentCard" title="Fullscreen">⛶</button>
+        <span class="ctrl-btn" id="incidentExpandAll">⊞ Expand All</span>
+      </div>
+    </div>
+    <div class="incident-grid" id="incidentGrid"></div>
+  </div>
+
+  <!-- ROW 3: Sankey + Force -->
+  <div class="grid grid-2">
+    <div class="card">
+      <div class="card-header">
+        <h3>Attack Path — Sankey Diagram</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="sankeyCard" title="Fullscreen">⛶</button>
+        </div>
+      </div>
+      <div class="chart-box" style="height: 400px;" id="sankeyChart"></div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <h3>Force Directed Attack Network</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="forceCard" title="Fullscreen">⛶</button>
+        </div>
+      </div>
+      <div class="chart-box" style="height: 400px;" id="forceChart"></div>
+    </div>
+  </div>
+
+  <!-- ROW 4: Hierarchy -->
+  <div class="card">
+    <div class="card-header">
+        <h3>Enterprise Cybersecurity Hierarchy</h3>
+        <div class="card-ctrl">
+          <button class="ctrl-btn fullscreen-btn" data-fullscreen="hierarchyCard" title="Fullscreen">⛶</button>
+        </div>
+    </div>
+    <div class="chart-box" style="height: 500px;" id="hierarchyChart"></div>
+  </div>
+
+</div>
+
+<!-- Data & Main App Logic -->
+<script src="world.js"></script>
+<script src="data.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
